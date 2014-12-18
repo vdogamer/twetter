@@ -11,6 +11,10 @@ class TwetsController < ApplicationController
   def index
     get_twets
   end
+  
+  def show
+    @twets = Twet.find(params[:id])
+  end
 
   # POST /twets
   #
