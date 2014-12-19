@@ -41,6 +41,7 @@ end
 
 # Use Devise for authentication: https://github.com/plataformatec/devise#getting-started
 gem 'devise'
+gem 'htmlascii'
 
 group :development, :test do
   # Use RSpec for testing: https://github.com/rspec/rspec-rails
