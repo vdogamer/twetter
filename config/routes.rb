@@ -15,7 +15,8 @@ Twetter::Application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  get '/twets/:id', to: 'twets#show'
+  get '/twets/:id', to: 'profiles#show'
+  get 'profiles', to: 'profiles#show'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

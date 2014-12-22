@@ -1,0 +1,8 @@
+<h1>This is the show twets view for a specific user!!!</h1>
+  <div>    
+    <p>Associated Titles: <% @profiles.twets.order(:created_at).each do |profile| %>
+      <!--<li><%= link_to article.title, article %></li>-->
+      <li>profile.content</li>
+      <% end %>
+    </p>    
+</div>

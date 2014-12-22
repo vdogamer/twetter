@@ -13,7 +13,7 @@ class TwetsController < ApplicationController
   end
   
   def show
-    @twets = Twet.find(params[:id])
+    @twets = Twets.find(params[:id])
   end
 
   # POST /twets
