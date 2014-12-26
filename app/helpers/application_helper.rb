@@ -5,6 +5,12 @@ module ApplicationHelper
   # authenticated user is already following the user passed, an unfollow (DELETE) form
   # will be generated. Otherwise, a follow (CREATE) form will be generated.
   #
+  
+  def avatar_url(user)
+    gravatar_id = Digest::MD5.hexdigest(user.email.downcase)
+    "http://gravatar.com/avatar/#{gravatar_id}.png"
+  end
+  
   def follow_link(user)
     follow = Follow.where(:user => current_user, :following => user)
     if follow.exists?
