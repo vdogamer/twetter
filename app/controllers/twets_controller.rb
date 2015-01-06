@@ -45,6 +45,7 @@ class TwetsController < ApplicationController
 
   # Sets the @twets instance variable to all twets viewable by the current user
   def get_twets
+    followed_retwet = current_user.follows
     if params[:username]
       @user = User.where(:username => params[:username]).first
       @twets = Twet.by_user_ids(@user.id) if @user
@@ -63,4 +64,6 @@ class TwetsController < ApplicationController
   def twet_params
     params.require(:twet).permit(:content)
   end
+  
+  
 end
