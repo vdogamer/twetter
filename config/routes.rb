@@ -6,6 +6,7 @@ Twetter::Application.routes.draw do
   authenticated :user do
     resources :follows, :except => [:new, :edit, :show, :update]
     resources :twets, :except => [:new, :edit, :show, :update]
+    resources :retwets, :only => [:create, :destroy]
    
     root :to => 'follows#index', :as => :user_root
   end
@@ -17,7 +18,7 @@ Twetter::Application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   # get '/twets/:id', to: 'profiles#show'
   # get 'profiles', to: 'profiles#show'
-  get ':username', :to => 'twets#index', :as => :profile
+  
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
