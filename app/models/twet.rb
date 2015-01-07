@@ -1,7 +1,7 @@
 class Twet < ActiveRecord::Base
   belongs_to :user
   
-  has_many :retwets
+  #has_many :retwets
 
   validates :content, :presence => true, :length => { :minimum => 2, :maximum => 140 }
   validates :user, :presence => true
