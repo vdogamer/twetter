@@ -3,7 +3,8 @@ class ProfilesController < ApplicationController
   end
   
   def show
-    @profiles = Users.find(params[:id])
+   # @profile = User.where(:username => params[:username]).first
+    @profile = User.find_by(:username => params[:username])
   end
   
 end
